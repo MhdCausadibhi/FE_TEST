@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+
+
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="nav-head">
+        <div class="left">
+            <h3>Warehouse Management System</h3>
+        </div>
+        <div class="right">
+            <div class="notification">
+                <p>alert</p>
+            </div>
+            <div class="profile">
+                <p>user</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="breadcrumb">
+        <li><a href="#">Stock Movement</a></li>
+        <li><a href="#">Pemindahan Barang</a></li>
+
+        <div class="title">
+            <label for="">Pemindahan Barang</label>
+        </div>
+    </div>
+
+
+    <div class="new-task">
+        <div class="task-title">
+            <h3>Buat Task Baru</h3>
+        </div>
+
+
+        <div class="form">
+            <div class="task">
+                <label for="">Task No</label>
+                <input type="text" disabled placeholder="SM-PB-001/24/2024">
+            </div>
+            <div class="task">
+                <label for="">Ditugaskan Ke</label>
+                <select name="cars" id="cars">
+                    <option value="">Pilih Karyawan</option>
+                    <option value="hurr">Durr</option>
+            </select>
+            </div>
+        </div>
+
+        <table>
+            <tr>
+              <th>Kode Barang</th>
+              <th>Nama Barang</th>
+              <th>Merk</th>
+              <th>Jenis Barang</th>
+              <th>Gudang</th>
+              <th>Total Stock (Pcs)</th>
+            </tr>
+            <tr>
+              <td>GMI-555-BALL</td>
+              <td>GMI-555-BALL</td>
+              <td>555</td>
+              <td>Baall-join</td>
+              <td>Tamansari</td>
+              <td class="btn-lokasi" id="myBtn">
+                <p>100</p>
+                <button>+ Lokasi</button>
+              </td>
+            </tr>
+           
+            <tr>
+              <td>GMI-555-BALL</td>
+              <td>GMI-555-BALL</td>
+              <td>555</td>
+              <td>Baall-join</td>
+              <td>Tamansari</td>
+              <td class="btn-lokasi">
+                <p>100</p>
+                <button>+ Lokasi</button>
+              </td>
+            </tr>
+           
+            <tr>
+              <td>GMI-555-BALL</td>
+              <td>GMI-555-BALL</td>
+              <td>555</td>
+              <td>Baall-join</td>
+              <td>Tamansari</td>
+              <td class="btn-lokasi">
+                <p>100</p>
+                <button>+ Lokasi</button>
+              </td>
+            </tr>
+           
+          </table>
+
+
+          <div class="generate-lok">
+            <button>Batal</button>
+            <button>Generate Task</button>
+        </div>
+    
+    </div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="isimodal">
+                <div class="head-modal">
+                    <div class="title-modal">
+                        <h2>Pilih Lokasi</h2>
+                    </div>
+                    <div class="close-btn">
+                        <span class="close">&times;</span>
+                    </div>
+                </div>
+
+
+                <table id="myTable" class="table table-striped" >  
+                    <thead>  
+                      <tr>  
+                        <th>Nama Lokasi</th>  
+                        <th>Gudang</th>  
+                        <th>Jenis</th>  
+                        <th>Volume</th>  
+                        <th>Deskripsi</th>  
+                      </tr>  
+                    </thead>  
+                    <tbody>  
+                      <tr>  
+                        <td>GMI-555-BALL</td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>TMS-L1-R-A001</td>  
+                        <td>700 Pcs</td>  
+                        <td>PCS</td>  
+                      </tr>  
+                      <tr>  
+                        <td>GMI-555-BALL</td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>TMS-L1-R-A001</td>  
+                        <td>700 Pcs</td>  
+                        <td>PCS</td>  
+                      </tr>  
+                    </tbody>  
+                  </table>  
+
+                    <div class="action-btn">
+                        <button>Batal</button>
+                        <button disabled>Tambahkan</button>
+                    </div>
+
+            </div>
+        </div>
+  
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

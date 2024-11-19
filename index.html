@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="nav-head">
+        <div class="left">
+            <h3>Warehouse Management System</h3>
+        </div>
+        <div class="right">
+            <div class="notification">
+                <p>alert</p>
+            </div>
+            <div class="profile">
+                <p>user</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="breadcrumb">
+        <li><a href="#">Stock Movement</a></li>
+        <li><a href="#">Pemindahan Barang</a></li>
+
+        <div class="title">
+            <label for="">Pemindahan Barang</label>
+        </div>
+    </div>
+
+
+    <div class="new-task">
+        <div class="task-title">
+            <h3>Buat Task Baru</h3>
+        </div>
+
+
+        <div class="form">
+            <div class="task">
+                <label for="">Task No</label>
+                <input type="text" disabled placeholder="SM-PB-001/24/2024">
+            </div>
+            <div class="task">
+                <label for="">Ditugaskan Ke</label>
+                <select name="cars" id="cars">
+                    <option value="">Pilih Karyawan</option>
+                    <option value="hurr">Durr</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="add">
+            <div class="tambah">
+                <h3>Belum ada barang</h3>
+                <p>Silahkan tambah barang terlebih dahulu untuk mulai memindahkan</p>
+
+                <div class="btn">
+                    <button id="myBtn">Tambah Barang</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="generate">
+            <button>Batal</button>
+            <button disabled>Generate Task</button>
+        </div>
+    </div>
+
+
+    <!-- modal box -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        
+            <div class="isimodal">
+                <div class="head-modal">
+                    <div class="title-modal">
+                        <h2>Tambah Barang</h2>
+                    </div>
+                    <div class="close-btn">
+                        <span class="close">&times;</span>
+                    </div>
+                </div>
+
+
+                <table id="myTable" class="table table-striped" >  
+                    <thead>  
+                      <tr>  
+                        <th>Kode Barang</th>  
+                        <th>Nama Barang</th>  
+                        <th>Merk</th>  
+                        <th>Jenis Barang</th>  
+                        <th>Gudang</th>  
+                        <th>Total Stock (Pcs)</th>  
+                      </tr>  
+                    </thead>  
+                    <tbody>  
+                      <tr>  
+                        <td>
+                            <input type="radio" >
+                            <label>GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                      <tr>  
+                        <td>
+                            <input type="radio"/>
+                            <label >GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                      <tr>  
+                        <td>
+                            <input type="radio" />
+                            <label>GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                      <tr>  
+                        <td>
+                            <input type="radio" />
+                            <label>GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                      <tr>  
+                        <td>
+                            <input type="radio" />
+                            <label>GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                      <tr>  
+                        <td>
+                            <input type="radio" />
+                            <label>GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                      <tr>  
+                        <td>
+                            <input type="radio" />
+                            <label>GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                      <tr>  
+                        <td>
+                            <input type="radio" />
+                            <label>GMI-555-BALL</label>
+                        </td>  
+                        <td>GMI-555-BALL</td>  
+                        <td>555</td>  
+                        <td>Ball Join</td>  
+                        <td>Tamansari</td>  
+                        <td>100</td>  
+                      </tr>  
+                     
+                   
+                     
+                    </tbody>  
+                  </table>  
+
+                    <div class="action-btn">
+                        <button>Batal</button>
+                        <button disabled>Tambah Ke Daftar Pemindahan</button>
+                    </div>
+
+            </div>
+        </div>
+  
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#myTable').dataTable();
+        });
+        </script>
+    <script src="script.js"></script>
+</body>
+</html>
